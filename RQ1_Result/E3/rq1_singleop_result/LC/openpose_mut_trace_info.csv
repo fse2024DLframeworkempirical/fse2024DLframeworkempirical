@@ -1,0 +1,11 @@
+mut_types,mut_layer_name,mut_result
+LC,stage_6.conv2_L2,True
+LC,stage_6.conv5_L2,True
+LC,stage_3.conv5_L2,True
+LC,base.vgg_base.layers.11,True
+LC,stage_6.relu,True
+LC,stage_6.conv4_L1,True
+LC,stage_4.conv4_L1,True
+LC,stage_2.conv5_L2,True
+LC,stage_5.conv2_L1,True
+LC,stage_3.relu,True

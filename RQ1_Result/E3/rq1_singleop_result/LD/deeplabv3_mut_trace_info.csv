@@ -1,0 +1,6 @@
+mut_types,mut_layer_name,mut_result
+LD,resnet.layer3.14.bn3,True
+LD,aspp.aspp1.aspp_conv.1,True
+LD,resnet.layer3.13.bn1,True
+LD,resnet.layer2.2.bn2,True
+LD,resnet.layer3.10.bn1,True

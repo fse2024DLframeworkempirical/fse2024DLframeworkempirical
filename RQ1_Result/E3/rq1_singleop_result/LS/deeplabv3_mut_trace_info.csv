@@ -1,0 +1,11 @@
+mut_types,mut_layer_name,mut_result
+LS,"resnet.layer3.19.bn3,resnet.layer3.10.relu",True
+LS,"resnet.layer3.7.bn3,resnet.layer3.7.relu",True
+LS,"resnet.layer3.14.bn2,resnet.layer3.17.conv2",True
+LS,"resnet.layer4.1.bn2,resnet.layer4.2.conv2",True
+LS,"aspp.aspp1.aspp_conv.2,resnet.layer3.10.bn2",True
+LS,"resnet.layer3.15.bn3,resnet.layer3.12.relu",True
+LS,"resnet.layer3.20.relu,resnet.layer3.13.bn3",True
+LS,"resnet.layer1.1.bn2,resnet.layer1.1.conv2",True
+LS,"resnet.layer3.19.conv2,resnet.layer3.14.bn1",True
+LS,"resnet.layer4.0.relu,resnet.layer4.1.bn3",True

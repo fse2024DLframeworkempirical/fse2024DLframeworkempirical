@@ -1,0 +1,11 @@
+mut_types,mut_layer_name,mut_result
+LA,no,LA Create illegal layer
+LA,stage_6.conv5_L2,True
+LA,stage_5.conv5_L1,True
+LA,no,LA Create illegal layer
+LA,stage_4.relu,True
+LA,stage_4.conv3_L1,True
+LA,no,LA Create illegal layer
+LA,stage_2.conv5_L2,True
+LA,stage_5.relu,True
+LA,stage_5.conv4_L2,True

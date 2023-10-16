@@ -1,0 +1,11 @@
+mut_types,mut_layer_name,mut_result
+LS,"stage_5.conv4_L2,stage_5.relu",True
+LS,"base.vgg_base.layers.8,base.vgg_base.layers.7",True
+LS,"stage_1.conv2_CPM_L1,stage_6.relu",True
+LS,"stage_5.conv2_L2,stage_5.conv4_L2",True
+LS,"base.vgg_base.layers.6,base.vgg_base.layers.8",True
+LS,"stage_3.conv4_L2,stage_1.conv2_CPM_L1",True
+LS,"base.vgg_base.layers.22,base.vgg_base.layers.21",True
+LS,"base.vgg_base.layers.21,base.vgg_base.layers.22",True
+LS,"base.vgg_base.layers.2,base.vgg_base.layers.3",True
+LS,"stage_5.conv5_L2,stage_4.relu",True

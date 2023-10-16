@@ -1,0 +1,6 @@
+mut_types,mut_layer_name,mut_result
+LD,stage_2.conv6_L2,True
+LD,stage_6.conv5_L2,True
+LD,stage_1.conv3_CPM_L1,True
+LD,stage_1.conv1_CPM_L2,True
+LD,stage_4.conv3_L2,True

@@ -1,0 +1,11 @@
+mut_types,mut_layer_name,mut_result
+RA,resnet.layer3.18.relu,True
+RA,resnet.layer3.8.relu,True
+RA,aspp.aspp1.aspp_conv.2,True
+RA,resnet.layer3.4.relu,True
+RA,resnet.layer3.4.relu,True
+RA,resnet.layer3.3.relu,True
+RA,aspp.relu,True
+RA,resnet.layer3.8.relu,True
+RA,resnet.layer4.0.relu,True
+RA,resnet.layer4.1.relu,True

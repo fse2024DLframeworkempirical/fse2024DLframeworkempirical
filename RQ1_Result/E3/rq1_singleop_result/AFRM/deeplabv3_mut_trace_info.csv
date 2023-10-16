@@ -1,0 +1,6 @@
+mut_types,mut_layer_name,mut_result
+AFRM,resnet.layer3.3.relu,True
+AFRM,resnet.layer2.0.relu,True
+AFRM,resnet.layer3.20.relu,True
+AFRM,resnet.layer3.17.relu,True
+AFRM,resnet.layer2.2.relu,True

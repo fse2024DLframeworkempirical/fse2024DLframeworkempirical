@@ -1,0 +1,11 @@
+mut_types,mut_layer_name,mut_result
+LA,no,LA set layers failure
+LA,resnet.layer4.0.bn1,True
+LA,resnet.layer4.2.bn1,True
+LA,resnet.layer3.18.bn2,True
+LA,no,LA Create illegal layer
+LA,no,LA set layers failure
+LA,no,False
+LA,no,False
+LA,no,False
+LA,resnet.layer3.1.relu,True

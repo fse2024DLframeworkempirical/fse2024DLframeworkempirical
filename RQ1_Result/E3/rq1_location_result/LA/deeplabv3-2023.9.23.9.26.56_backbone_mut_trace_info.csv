@@ -1,0 +1,101 @@
+mut_types,mut_layer_name,mut_result
+LA,no,False
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,no,False
+LA,resnet.layer1.0.bn1,True
+LA,resnet.layer2.2.bn3,True
+LA,resnet.layer3.0.relu,True
+LA,resnet.layer3.19.conv2,True
+LA,no,False
+LA,no,LA Create illegal layer
+LA,resnet.layer3.4.bn1,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.1.bn1,True
+LA,no,False
+LA,no,LA Create illegal layer
+LA,no,False
+LA,no,LA Create illegal layer
+LA,resnet.layer2.0.bn3,True
+LA,resnet.bn1,True
+LA,no,False
+LA,no,False
+LA,no,LA Create illegal layer
+LA,no,False
+LA,resnet.layer3.19.relu,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,no,False
+LA,resnet.layer3.17.bn2,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.14.bn2,True
+LA,no,LA Create illegal layer
+LA,no,LA set layers failure
+LA,no,False
+LA,no,False
+LA,resnet.layer1.1.bn1,True
+LA,resnet.layer3.8.conv2,True
+LA,resnet.layer4.0.conv2,True
+LA,resnet.layer4.1.bn3,True
+LA,resnet.layer3.1.relu,True
+LA,resnet.layer4.2.relu,True
+LA,resnet.layer1.2.conv2,True
+LA,resnet.layer2.3.bn3,True
+LA,resnet.layer1.0.bn2,True
+LA,no,LA set layers failure
+LA,resnet.layer3.5.bn1,True
+LA,resnet.layer3.10.bn2,True
+LA,no,False
+LA,resnet.layer3.6.bn1,True
+LA,resnet.layer3.13.bn3,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.14.bn1,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.22.bn2,True
+LA,resnet.layer2.3.bn3,True
+LA,resnet.layer4.2.bn3,True
+LA,no,False
+LA,no,LA Create illegal layer
+LA,resnet.layer3.13.conv2,True
+LA,no,LA Create illegal layer
+LA,no,False
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,resnet.layer3.8.bn1,True
+LA,resnet.layer2.0.bn1,True
+LA,resnet.layer3.19.bn3,True
+LA,no,False
+LA,no,LA set layers failure
+LA,resnet.layer3.20.conv2,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.22.bn2,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.13.conv2,True
+LA,no,LA Create illegal layer
+LA,resnet.layer2.3.relu,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,no,False
+LA,resnet.layer3.22.bn2,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.12.bn1,True
+LA,resnet.layer3.11.conv2,True
+LA,no,LA Create illegal layer
+LA,resnet.layer1.0.bn3,True
+LA,resnet.layer3.2.bn1,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.14.conv2,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,resnet.layer3.12.bn1,True
+LA,resnet.layer1.1.bn1,True
+LA,resnet.layer3.10.conv2,True
+LA,resnet.layer3.5.relu,True
+LA,resnet.layer1.2.bn2,True
+LA,resnet.layer3.11.conv2,True
+LA,resnet.layer4.2.bn3,True
+LA,resnet.layer3.22.bn1,True
+LA,no,LA Create illegal layer
+LA,resnet.layer3.13.conv2,True

@@ -1,0 +1,101 @@
+mut_types,mut_layer_name,mut_result
+LD,no,LD No suitable ops for
+LS,no,no suitable layer
+RA,down3.maxpool_conv.1.double_conv.1,True
+LC,up4.conv.double_conv.1,True
+RA,up2.conv.double_conv.3,True
+NAI,up4.conv.double_conv.2,True
+NAI,down4.maxpool_conv.1.double_conv.2,True
+WS,down1.maxpool_conv.1.double_conv.2,True
+NS,up3.up,True
+LD,up4.conv.double_conv.1,True
+WS,inc.double_conv.0,True
+GF,inc.double_conv.3,True
+LC,down1.maxpool_conv.1.double_conv.1,True
+LC,up3.conv.double_conv.1,True
+LD,up3.conv.double_conv.1,True
+WS,down2.maxpool_conv.1.double_conv.2,True
+NS,down3.maxpool_conv.1.double_conv.2,True
+NS,down2.maxpool_conv.1.double_conv.2,True
+LA,down4.maxpool_conv.1.double_conv.1,True
+NS,inc.double_conv.2,True
+GF,up4.conv,True
+LD,down1.maxpool_conv.1.double_conv.1,True
+RA,up3.relu,True
+GF,outc,True
+NEB,no,no suitable layer
+NS,inc.double_conv.0,True
+LS,no,no suitable layer
+GF,up1.relu,True
+NEB,no,no suitable layer
+AFRM,down3.maxpool_conv.1.double_conv.3,True
+RA,down1.maxpool_conv.1.double_conv.3,True
+GF,inc.double_conv.1,True
+AFRM,down2.maxpool_conv.1.double_conv.1,True
+AFRM,up1.conv.double_conv.3,True
+RA,up4.relu,True
+AFRM,up4.conv.double_conv.3,True
+NS,up1.conv.double_conv.2,True
+NEB,no,no suitable layer
+LD,down1.maxpool_conv.1.double_conv.1,True
+LC,down2.maxpool_conv.1.double_conv.3,True
+NAI,down3.maxpool_conv.1.double_conv.0,True
+RA,up2.relu,True
+GF,down3.maxpool_conv.1.double_conv.2,True
+NAI,up3.conv.double_conv.0,True
+LD,up3.conv.double_conv.1,True
+GF,inc.double_conv.0,True
+LD,down1.maxpool_conv.1.double_conv.1,True
+NAI,up2.up,True
+NEB,no,no suitable layer
+NEB,no,no suitable layer
+LD,no,set layers failure
+NAI,down3.maxpool_conv.1.double_conv.0,True
+LA,up3.conv.double_conv.1,True
+GF,up3.relu,True
+LS,no,no suitable layer
+NEB,no,no suitable layer
+LC,inc.double_conv.1,True
+LS,no,no suitable layer
+LD,up4.conv.double_conv.1,True
+NS,down1.maxpool_conv.1.double_conv.2,True
+NS,outc.conv,True
+LS,no,no suitable layer
+RA,up4.relu,True
+LD,no,set layers failure
+LC,down1.maxpool_conv.1.double_conv.3,True
+GF,down4.maxpool_conv.1.double_conv.3,True
+AFRM,up1.relu,True
+NEB,no,no suitable layer
+LC,up3.conv.double_conv.3,True
+NEB,no,no suitable layer
+LC,up2.relu,True
+LA,up3.relu,True
+LS,no,no suitable layer
+AFRM,up4.relu,True
+RA,up2.conv.double_conv.1,True
+NAI,up3.conv.double_conv.1,True
+LD,up3.relu,True
+LC,down4.maxpool_conv.1.double_conv.3,True
+RA,up2.conv.double_conv.1,True
+RA,up2.conv.double_conv.3,True
+AFRM,up2.conv.double_conv.1,True
+LA,no,LA Create illegal layer
+GF,down4.maxpool_conv.1.double_conv.0,True
+LC,up2.conv.double_conv.3,True
+NEB,no,no suitable layer
+RA,up1.conv.double_conv.1,True
+LD,up2.relu,True
+NS,up4.conv.double_conv.0,True
+NS,up3.conv.double_conv.0,True
+NEB,no,no suitable layer
+LC,down3.maxpool_conv.1.double_conv.1,True
+NS,down1.maxpool_conv.1.double_conv.2,True
+LD,no,set layers failure
+LS,no,no suitable layer
+NAI,up3.conv.double_conv.2,True
+NAI,up4.conv.double_conv.0,True
+NS,up4.conv.double_conv.0,True
+AFRM,inc.double_conv.3,True
+RA,up1.conv.double_conv.1,True
+NEB,no,no suitable layer

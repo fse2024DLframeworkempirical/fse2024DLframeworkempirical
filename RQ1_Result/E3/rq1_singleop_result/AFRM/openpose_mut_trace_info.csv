@@ -1,0 +1,6 @@
+mut_types,mut_layer_name,mut_result
+AFRM,base.vgg_base.layers.15,True
+AFRM,base.vgg_base.layers.20,True
+AFRM,stage_2.relu,True
+AFRM,stage_4.relu,True
+AFRM,base.vgg_base.layers.22,True

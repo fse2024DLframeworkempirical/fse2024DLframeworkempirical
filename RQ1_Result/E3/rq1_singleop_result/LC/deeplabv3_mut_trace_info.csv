@@ -1,0 +1,11 @@
+mut_types,mut_layer_name,mut_result
+LC,resnet.layer3.18.relu,True
+LC,resnet.layer3.9.relu,True
+LC,resnet.layer4.2.bn1,True
+LC,resnet.layer1.2.relu,True
+LC,resnet.layer3.14.conv2,True
+LC,no,LC set layers failure
+LC,resnet.layer3.21.bn3,True
+LC,resnet.layer3.16.conv2,True
+LC,no,LC set layers failure
+LC,resnet.layer3.6.bn2,True

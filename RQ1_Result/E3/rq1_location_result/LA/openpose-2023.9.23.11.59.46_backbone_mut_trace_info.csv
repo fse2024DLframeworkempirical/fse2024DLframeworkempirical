@@ -1,0 +1,101 @@
+mut_types,mut_layer_name,mut_result
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.21,True
+LA,base.vgg_base.layers.6,True
+LA,base.vgg_base.layers.21,True
+LA,base.vgg_base.layers.11,True
+LA,base.vgg_base.layers.12,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.21,True
+LA,base.vgg_base.layers.8,True
+LA,no,LA set layers failure
+LA,base.vgg_base.layers.21,True
+LA,no,LA set layers failure
+LA,base.vgg_base.layers.7,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.3,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.12,True
+LA,base.vgg_base.layers.20,True
+LA,base.vgg_base.layers.14,True
+LA,base.vgg_base.layers.22,True
+LA,base.vgg_base.layers.20,True
+LA,base.vgg_base.layers.11,True
+LA,no,LA Create illegal layer
+LA,base.relu,True
+LA,no,LA set layers failure
+LA,base.vgg_base.layers.14,True
+LA,base.vgg_base.layers.22,True
+LA,no,LA set layers failure
+LA,no,False
+LA,base.vgg_base.layers.17,True
+LA,base.vgg_base.layers.8,True
+LA,base.vgg_base.layers.20,True
+LA,base.vgg_base.layers.8,True
+LA,base.vgg_base.layers.17,True
+LA,base.vgg_base.layers.12,True
+LA,base.vgg_base.layers.1,True
+LA,base.vgg_base.layers.22,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,no,False
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.16,True
+LA,base.vgg_base.layers.21,True
+LA,base.vgg_base.layers.2,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.17,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.2,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.20,True
+LA,base.vgg_base.layers.15,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.21,True
+LA,base.vgg_base.layers.21,True
+LA,base.vgg_base.layers.16,True
+LA,base.vgg_base.layers.14,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.3,True
+LA,base.vgg_base.layers.6,True
+LA,base.vgg_base.layers.7,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.17,True
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.11,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.6,True
+LA,base.vgg_base.layers.15,True
+LA,no,LA Create illegal layer
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.16,True
+LA,no,LA set layers failure
+LA,no,LA Create illegal layer
+LA,base.vgg_base.layers.14,True
+LA,base.vgg_base.layers.7,True
+LA,base.vgg_base.layers.13,True
+LA,base.vgg_base.layers.7,True
+LA,base.vgg_base.layers.8,True
+LA,base.vgg_base.layers.2,True
+LA,base.vgg_base.layers.21,True
+LA,base.vgg_base.layers.3,True
+LA,base.vgg_base.layers.22,True
+LA,base.vgg_base.layers.7,True
+LA,base.vgg_base.layers.22,True
+LA,base.vgg_base.layers.2,True
+LA,base.vgg_base.layers.20,True
+LA,base.vgg_base.layers.2,True
+LA,base.vgg_base.layers.3,True
+LA,no,LA set layers failure
+LA,base.vgg_base.layers.12,True
+LA,base.vgg_base.layers.12,True
+LA,base.vgg_base.layers.8,True
+LA,no,False
+LA,base.vgg_base.layers.11,True
+LA,base.vgg_base.layers.6,True
+LA,base.vgg_base.layers.14,True
+LA,base.vgg_base.layers.21,True
