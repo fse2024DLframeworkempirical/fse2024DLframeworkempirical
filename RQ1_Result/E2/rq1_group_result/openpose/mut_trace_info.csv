@@ -1,0 +1,101 @@
+mut_types,mut_layer_name,mut_result
+LD,base.vgg_base.layers.12,True
+LS,"base.vgg_base.layers.7,base.vgg_base.layers.6",True
+RA,base.vgg_base.layers.13,True
+LC,base.vgg_base.layers.11,True
+RA,base.vgg_base.layers.22,True
+NAI,base.conv4_3_CPM,True
+NAI,base.vgg_base.layers.10,True
+WS,base.vgg_base.layers.2,True
+NS,base.vgg_base.layers.19,True
+LD,base.vgg_base.layers.16,True
+WS,base.vgg_base.layers.0,True
+GF,base.vgg_base.layers.2,True
+LC,base.vgg_base.layers.21,True
+LC,base.vgg_base.layers.8,True
+LD,base.vgg_base.layers.21,True
+WS,base.vgg_base.layers.6,True
+NS,base.vgg_base.layers.0,True
+NS,base.conv4_3_CPM,True
+LA,no,LA set layers failure
+NS,base.vgg_base.layers.19,True
+GF,stage_6.conv3_L2,True
+LD,base.vgg_base.layers.11,True
+RA,base.vgg_base.layers.17,True
+GF,stage_5.conv5_L2,True
+NEB,base.vgg_base.layers.10,True
+NS,base.vgg_base.layers.14,True
+LS,"base.vgg_base.layers.21,base.vgg_base.layers.22",True
+GF,stage_2.conv5_L2,True
+NEB,base.vgg_base.layers.10,True
+AFRM,base.vgg_base.layers.15,True
+RA,base.vgg_base.layers.3,True
+GF,base.vgg_base.layers.0,True
+AFRM,base.vgg_base.layers.3,True
+AFRM,base.vgg_base.layers.17,True
+RA,base.relu,True
+AFRM,base.vgg_base.layers.1,True
+NS,base.vgg_base.layers.2,True
+NEB,base.vgg_base.layers.10,True
+LD,base.vgg_base.layers.22,True
+LC,no,LC set layers failure
+NAI,base.vgg_base.layers.0,True
+RA,base.vgg_base.layers.21,True
+GF,stage_1.conv2_CPM_L2,True
+NAI,base.vgg_base.layers.19,True
+LD,base.vgg_base.layers.6,True
+GF,stage_4.conv7_L2,True
+LD,base.vgg_base.layers.11,True
+NAI,base.vgg_base.layers.14,True
+NEB,base.vgg_base.layers.10,True
+NEB,base.vgg_base.layers.10,True
+LD,base.vgg_base.layers.22,True
+NAI,base.conv4_4_CPM,True
+LA,no,LA Create illegal layer
+GF,stage_4.conv4_L1,True
+LS,"base.vgg_base.layers.13,base.vgg_base.layers.14",True
+NEB,base.vgg_base.layers.10,True
+LC,base.vgg_base.layers.20,True
+LS,"base.vgg_base.layers.13,base.vgg_base.layers.14",True
+LD,base.vgg_base.layers.20,True
+NS,base.vgg_base.layers.0,True
+NS,base.conv4_3_CPM,True
+LS,"base.vgg_base.layers.14,base.vgg_base.layers.13",True
+RA,base.relu,True
+LD,base.vgg_base.layers.8,True
+LC,base.vgg_base.layers.14,True
+GF,stage_2.conv1_L2,True
+AFRM,base.vgg_base.layers.7,True
+NEB,base.vgg_base.layers.10,True
+LC,base.vgg_base.layers.13,True
+NEB,base.vgg_base.layers.10,True
+LC,base.relu,True
+LA,base.vgg_base.layers.14,True
+LS,no,no suitable layer
+AFRM,base.vgg_base.layers.21,True
+RA,no,False
+NAI,base.vgg_base.layers.0,True
+LD,base.vgg_base.layers.13,True
+LC,no,LC set layers failure
+RA,no,False
+RA,no,False
+AFRM,no,AFRM No suitable ops for
+LA,no,LA Create illegal layer
+GF,stage_2.conv1_L2,True
+LC,no,LC set layers failure
+NEB,base.vgg_base.layers.10,True
+RA,no,False
+LD,base.vgg_base.layers.2,True
+NS,base.vgg_base.layers.0,True
+NS,base.vgg_base.layers.19,True
+NEB,base.vgg_base.layers.10,True
+LC,no,LC No suitable ops for
+NS,base.vgg_base.layers.19,True
+LD,base.vgg_base.layers.8,True
+LS,no,no suitable layer
+NAI,base.vgg_base.layers.0,True
+NAI,base.vgg_base.layers.14,True
+NS,base.vgg_base.layers.19,True
+AFRM,no,AFRM No suitable ops for
+RA,no,False
+NEB,base.vgg_base.layers.10,True

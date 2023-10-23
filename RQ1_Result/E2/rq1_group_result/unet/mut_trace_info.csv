@@ -1,0 +1,101 @@
+mut_types,mut_layer_name,mut_result
+LD,no,LD No suitable ops for
+LS,no,no suitable layer
+RA,down3.maxpool_conv.1.double_conv.1,True
+LC,down1.maxpool_conv.1.double_conv.3,True
+RA,up1.relu,True
+NAI,down3.maxpool_conv.1.double_conv.2,True
+NAI,up2.up,True
+WS,up2.conv.double_conv.0,True
+NS,up4.conv.double_conv.0,True
+LD,down1.maxpool_conv.1.double_conv.3,True
+WS,down4.maxpool_conv.1.double_conv.0,True
+GF,inc.double_conv.3,True
+LC,down1.maxpool_conv.1.double_conv.1,True
+LC,up4.conv.double_conv.3,True
+LD,down1.maxpool_conv.1.double_conv.1,True
+WS,inc.double_conv.0,True
+NS,down3.maxpool_conv.1.double_conv.2,True
+NS,inc.double_conv.0,True
+LA,down4.maxpool_conv.1.double_conv.1,True
+NS,up1.up,True
+GF,up4.conv.double_conv,True
+LD,no,set layers failure
+RA,up3.conv.double_conv.3,True
+GF,outc.conv,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+NS,down4.maxpool_conv.1.double_conv.0,True
+LS,no,no suitable layer
+GF,up2,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+AFRM,inc.double_conv.3,True
+RA,up1.conv.double_conv.3,True
+GF,inc.double_conv.1,True
+AFRM,up1.conv.double_conv.3,True
+AFRM,up1.conv.double_conv.1,True
+RA,up4.conv.double_conv.1,True
+AFRM,up2.conv.double_conv.1,True
+NS,down4.maxpool_conv.1.double_conv.2,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+LD,down1.maxpool_conv.1.double_conv.1,True
+LC,down2.maxpool_conv.1.double_conv.1,True
+NAI,up3.conv.double_conv.2,True
+RA,up4.relu,True
+GF,down3.maxpool_conv.1.double_conv.3,True
+NAI,up3.conv.double_conv.0,True
+LD,down1.maxpool_conv.1.double_conv.1,True
+GF,inc.double_conv.0,True
+LD,down2.maxpool_conv.1.double_conv.1,True
+NAI,up3.conv.double_conv.2,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+LD,down2.maxpool_conv.1.double_conv.1,True
+NAI,up3.conv.double_conv.0,True
+LA,no,LA Create illegal layer
+GF,up4.conv.double_conv,True
+LS,no,no suitable layer
+NEB,down2.maxpool_conv.1.double_conv.2,True
+LC,up4.conv.double_conv.1,True
+LS,no,no suitable layer
+LD,up4.conv.double_conv.1,True
+NS,down2.maxpool_conv.1.double_conv.0,True
+NS,up2.up,True
+LS,no,no suitable layer
+RA,down2.maxpool_conv.1.double_conv.3,True
+LD,up4.conv.double_conv.3,True
+LC,up3.conv.double_conv.3,True
+GF,up1.center_crop,True
+AFRM,up1.relu,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+LC,up2.relu,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+LC,up3.relu,True
+LA,no,LA Create illegal layer
+LS,no,no suitable layer
+AFRM,down4.maxpool_conv.1.double_conv.3,True
+RA,down3.maxpool_conv.1.double_conv.1,True
+NAI,down3.maxpool_conv.1.double_conv.0,True
+LD,up3.conv.double_conv.3,True
+LC,down3.maxpool_conv.1.double_conv.3,True
+RA,up3.conv.double_conv.1,True
+RA,down2.maxpool_conv.1.double_conv.3,True
+AFRM,up3.conv.double_conv.1,True
+LA,up2.conv.double_conv.3,True
+GF,down4.maxpool_conv.1.double_conv.2,True
+LC,inc.double_conv.1,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+RA,up4.relu,True
+LD,up3.relu,True
+NS,inc.double_conv.2,True
+NS,up4.conv.double_conv.2,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
+LC,down2.maxpool_conv.1.double_conv.3,True
+NS,up2.conv.double_conv.0,True
+LD,inc.double_conv.1,True
+LS,no,no suitable layer
+NAI,up3.conv.double_conv.2,True
+NAI,up1.up,True
+NS,inc.double_conv.2,True
+AFRM,up4.relu,True
+RA,down3.maxpool_conv.1.double_conv.1,True
+NEB,down2.maxpool_conv.1.double_conv.2,True
