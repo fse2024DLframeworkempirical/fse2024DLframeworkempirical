@@ -1,0 +1,524 @@
+Adopt LD mut_strategy!
+delete layer_name:resnet.layer3.1.bn2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+1 generation!
+
+Adopt LS mut_strategy!
+switch layer1:resnet.layer3.18.conv2
+switch layer2:resnet.layer3.6.bn1
+mut_result:True
+2 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: aspp.aspp4.aspp_conv.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 256, 33, 33] out_shape: [2, 256, 33, 33]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+3 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer4.2.bn2 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 512, 33, 33) out_shape: (2, 512, 33, 33)
+mut Basic type: True
+add Basic layer : 
+select insert layer: BatchNorm2d<num_features=512, eps=1e-05, momentum=0.9, gamma=Parameter (name=resnet.layer4.2.bn2.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=resnet.layer4.2.bn2.beta, shape=(512,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=resnet.layer4.2.bn2.moving_mean, shape=(512,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=resnet.layer4.2.bn2.moving_variance, shape=(512,), dtype=Float32, requires_grad=False)>
+mut_result:True
+4 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer2.2.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 512, 65, 65] out_shape: [2, 512, 65, 65]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+5 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+candidate_in_mutlayers_indice:-1
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.1.conv3
+layer type:Conv2d
+random_seed:95614
+mutation_ratio:0.4
+mut_result:True
+6 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.17.conv1
+layer type:Conv2d
+random_seed:95614
+mutation_ratio:0.4
+mut_result:True
+7 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.13.conv2
+layer type:Conv2d
+random_seed:95615
+mutation_ratio:0.4
+mut_result:True
+8 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.1.conv2
+layer type:Conv2d
+random_seed:95615
+mutation_ratio:0.4
+mut_result:True
+9 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:resnet.layer2.2.bn3
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+10 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.17.conv3
+layer type:Conv2d
+random_seed:95616
+mutation_ratio:0.4
+mut_result:True
+11 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.8.bn3
+layer type:BatchNorm2d
+random_seed:95617
+mutation_ratio:0.4
+mut_result:True
+12 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer3.20.conv2 layer_type: <class 'mindspore.nn.layer.conv.Conv2d'> in_shape: (2, 256, 33, 33) out_shape: (2, 256, 33, 33)
+mut Basic type: True
+add Basic layer : 
+select insert layer: Conv2d<input_channels=256, output_channels=256, kernel_size=(3, 3), stride=(1, 1), pad_mode=pad, padding=2, dilation=(2, 2), group=1, has_bias=False, weight_init=xavier_uniform, bias_init=zeros, format=NCHW>
+mut_result:True
+13 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer3.6.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: (2, 1024, 33, 33) out_shape: (2, 1024, 33, 33)
+mut Basic type: True
+add Basic layer : 
+select insert layer: ReLU<>
+mut_result:True
+14 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:resnet.layer3.6.bn3
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+15 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.6.conv2
+layer type:Conv2d
+random_seed:95619
+mutation_ratio:0.4
+mut_result:True
+16 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer2.0.conv1
+layer type:Conv2d
+random_seed:95620
+mutation_ratio:0.4
+mut_result:True
+17 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.19.conv2
+layer type:Conv2d
+random_seed:95621
+mutation_ratio:0.4
+mut_result:True
+18 generation!
+
+Adopt LA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer3.12.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Conv2d<input_channels=1024, output_channels=1024, kernel_size=(1, 1), stride=(1, 1), pad_mode=valid, padding=0, dilation=(1, 1), group=1, has_bias=True, weight_init=[[[[1.]]
+
+  [[1.]]
+
+  [[1.]]
+
+  ...
+
+  [[1.]]
+
+  [[1.]]
+
+  [[1.]]]
+
+
+ [[[1.]]
+
+  [[1.]]
+
+  [[1.]]
+
+  ...
+
+  [[1.]]
+
+  [[1.]]
+
+  [[1.]]]
+
+
+ [[[1.]]
+
+  [[1.]]
+
+  [[1.]]
+
+  ...
+
+  [[1.]]
+
+  [[1.]]
+
+  [[1.]]]
+
+
+ ...
+
+
+ [[[1.]]
+
+  [[1.]]
+
+  [[1.]]
+
+  ...
+
+  [[1.]]
+
+  [[1.]]
+
+  [[1.]]]
+
+
+ [[[1.]]
+
+  [[1.]]
+
+  [[1.]]
+
+  ...
+
+  [[1.]]
+
+  [[1.]]
+
+  [[1.]]]
+
+
+ [[[1.]]
+
+  [[1.]]
+
+  [[1.]]
+
+  ...
+
+  [[1.]]
+
+  [[1.]]
+
+  [[1.]]]], bias_init=[1. 1. 1. ... 1. 1. 1.], format=NCHW>
+insert_layer_outshape equal!
+mut_result:True
+19 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer2.1.conv2
+layer type:Conv2d
+random_seed:95622
+mutation_ratio:0.4
+mut_result:True
+20 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.21.conv2
+layer type:Conv2d
+random_seed:95622
+mutation_ratio:0.4
+mut_result:True
+21 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:resnet.layer3.11.bn3
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+22 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer3.10.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: ReLU<>
+insert_layer_outshape equal!
+mut_result:True
+23 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.19.bn3
+layer type:BatchNorm2d
+random_seed:95624
+mutation_ratio:0.4
+mut_result:True
+24 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.2.conv1
+layer type:Conv2d
+random_seed:95625
+mutation_ratio:0.4
+mut_result:True
+25 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.6.conv3
+layer type:Conv2d
+random_seed:95626
+mutation_ratio:0.4
+mut_result:True
+26 generation!
+
+Adopt LS mut_strategy!
+switch layer1:resnet.layer1.0.bn2
+switch layer2:resnet.layer1.2.conv2
+mut_result:True
+27 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer4.1.conv2
+layer type:Conv2d
+random_seed:95627
+mutation_ratio:0.4
+mut_result:True
+28 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.2.conv1
+layer type:Conv2d
+random_seed:95628
+mutation_ratio:0.4
+mut_result:True
+29 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:resnet.layer2.2.relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+30 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer3.22.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+31 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer4.0.conv3
+layer type:Conv2d
+random_seed:95630
+mutation_ratio:0.4
+mut_result:True
+32 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:resnet.layer1.1.relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+33 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:resnet.layer4.2.relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+34 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 64, 257, 257] out_shape: [2, 64, 257, 257]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: ReLU<>
+insert_layer_outshape equal!
+mut_result:True
+35 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:resnet.layer3.18.relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+36 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.2.conv1
+layer type:Conv2d
+random_seed:95633
+mutation_ratio:0.4
+mut_result:True
+37 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.2.conv1
+layer type:Conv2d
+random_seed:95634
+mutation_ratio:0.4
+mut_result:True
+38 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:resnet.layer3.12.bn1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+39 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer3.8.conv2 layer_type: <class 'mindspore.nn.layer.conv.Conv2d'> in_shape: (2, 256, 33, 33) out_shape: (2, 256, 33, 33)
+mut Basic type: True
+add Basic layer : 
+select insert layer: Conv2d<input_channels=256, output_channels=256, kernel_size=(3, 3), stride=(1, 1), pad_mode=pad, padding=2, dilation=(2, 2), group=1, has_bias=False, weight_init=xavier_uniform, bias_init=zeros, format=NCHW>
+mut_result:True
+40 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer2.2.conv1
+layer type:Conv2d
+random_seed:95636
+mutation_ratio:0.4
+mut_result:True
+41 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: resnet.layer3.3.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Tanh<>
+insert_layer_outshape equal!
+mut_result:True
+42 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:aspp.aspp3
+layer type:ASPPConv
+random_seed:95637
+mutation_ratio:0.4
+mut_result:True
+43 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.11.conv2
+layer type:Conv2d
+random_seed:95638
+mutation_ratio:0.4
+mut_result:True
+44 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:aspp.aspp4.aspp_conv.1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+45 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.20.relu
+layer type:ReLU
+random_seed:95639
+mutation_ratio:0.4
+mut_result:True
+46 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:resnet.layer3.3.bn3
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+47 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+candidate_in_mutlayers_indice:-1
+candidate_in_mutlayers_indice:-1
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.10.conv1
+layer type:Conv2d
+random_seed:95640
+mutation_ratio:0.4
+mut_result:True
+48 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.2.conv1
+layer type:Conv2d
+random_seed:95641
+mutation_ratio:0.4
+mut_result:True
+49 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:resnet.layer3.2.conv1
+layer type:Conv2d
+random_seed:95642
+mutation_ratio:0.4
+mut_result:True
+50 generation!
+

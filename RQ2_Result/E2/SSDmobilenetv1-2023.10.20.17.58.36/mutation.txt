@@ -1,0 +1,433 @@
+Adopt LD mut_strategy!
+delete layer_name:network.12.1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+1 generation!
+
+Adopt LS mut_strategy!
+switch layer1:network.19.0
+switch layer2:network.17.1
+mut_result:True
+2 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.6.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: [2, 128, 75, 75] out_shape: [2, 128, 75, 75]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+3 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.9.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: (2, 256, 38, 38) out_shape: (2, 256, 38, 38)
+mut Basic type: True
+add Basic layer : 
+select insert layer: ReLU6<>
+mut_result:True
+4 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.25.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: [2, 1024, 10, 10] out_shape: [2, 1024, 10, 10]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+5 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.11.0
+layer type:Conv2d
+random_seed:175853
+mutation_ratio:0.4
+mut_result:True
+6 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.0.0
+layer type:Conv2d
+random_seed:175853
+mutation_ratio:0.4
+mut_result:True
+7 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.24.0
+layer type:Conv2d
+random_seed:175853
+mutation_ratio:0.4
+mut_result:True
+8 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.1.0
+layer type:Conv2d
+random_seed:175854
+mutation_ratio:0.4
+mut_result:True
+9 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:network.20.1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+10 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.7.0
+layer type:Conv2d
+random_seed:175854
+mutation_ratio:0.4
+mut_result:True
+11 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:0
+select layer:network.1
+layer type:Conv2d
+random_seed:175854
+mutation_ratio:0.4
+mut_result:True
+12 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.13.1 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 512, 19, 19) out_shape: (2, 512, 19, 19)
+mut Basic type: True
+add Basic layer : 
+select insert layer: BatchNorm2d<num_features=512, eps=1e-05, momentum=0.9, gamma=Parameter (name=network.13.1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=network.13.1.beta, shape=(512,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=network.13.1.moving_mean, shape=(512,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=network.13.1.moving_variance, shape=(512,), dtype=Float32, requires_grad=False)>
+Failed to set layer: network.13.1!
+list index out of range
+mut_result:LC set layers failure!
+13 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.18.1 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 512, 19, 19) out_shape: (2, 512, 19, 19)
+mut Basic type: True
+add Basic layer : 
+select insert layer: BatchNorm2d<num_features=512, eps=1e-05, momentum=0.9, gamma=Parameter (name=network.18.1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=network.18.1.beta, shape=(512,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=network.18.1.moving_mean, shape=(512,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=network.18.1.moving_variance, shape=(512,), dtype=Float32, requires_grad=False)>
+Failed to set layer: network.18.1!
+list index out of range
+mut_result:LC set layers failure!
+14 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:network.10.0
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+15 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.25.0
+layer type:Conv2d
+random_seed:175858
+mutation_ratio:0.4
+mut_result:True
+16 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.7.0
+layer type:Conv2d
+random_seed:175858
+mutation_ratio:0.4
+mut_result:True
+17 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.25.0
+layer type:Conv2d
+random_seed:175858
+mutation_ratio:0.4
+mut_result:True
+18 generation!
+
+Adopt LA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.22.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: [2, 512, 19, 19] out_shape: [2, 512, 19, 19]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: BatchNorm2d<num_features=512, eps=1e-05, momentum=0.5, gamma=Parameter (name=gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=beta, shape=(512,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=mean, shape=(512,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=variance, shape=(512,), dtype=Float32, requires_grad=False)>
+insert_layer_outshape equal!
+mut_result:True
+19 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.23.0
+layer type:Conv2d
+random_seed:175858
+mutation_ratio:0.4
+mut_result:True
+20 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.18.2
+layer type:ReLU6
+random_seed:175858
+mutation_ratio:0.4
+mut_result:True
+21 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:network.22.2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+22 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.7.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: [2, 128, 38, 38] out_shape: [2, 128, 38, 38]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+23 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.25.1
+layer type:BatchNorm2d
+random_seed:175859
+mutation_ratio:0.4
+mut_result:True
+24 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.13.0
+layer type:Conv2d
+random_seed:175859
+mutation_ratio:0.4
+mut_result:True
+25 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.7.0
+layer type:Conv2d
+random_seed:175900
+mutation_ratio:0.4
+mut_result:True
+26 generation!
+
+Adopt LS mut_strategy!
+switch layer1:network.7.1
+switch layer2:network.7.2
+mut_result:True
+27 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:1
+select layer:network.13
+layer type:BatchNorm2d
+random_seed:175900
+mutation_ratio:0.4
+mut_result:True
+28 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.13.0
+layer type:Conv2d
+random_seed:175900
+mutation_ratio:0.4
+mut_result:True
+29 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:network.15.2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+30 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.14.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: [2, 512, 19, 19] out_shape: [2, 512, 19, 19]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: ReLU<>
+insert_layer_outshape equal!
+mut_result:True
+31 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.0.1
+layer type:BatchNorm2d
+random_seed:175901
+mutation_ratio:0.4
+mut_result:True
+32 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:network.16.2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+33 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:network.18.2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+34 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.2.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: [2, 64, 150, 150] out_shape: [2, 64, 150, 150]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Tanh<>
+insert_layer_outshape equal!
+mut_result:True
+35 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:network.19.2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+36 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.12.0
+layer type:Conv2d
+random_seed:175902
+mutation_ratio:0.4
+mut_result:True
+37 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.13.0
+layer type:Conv2d
+random_seed:175902
+mutation_ratio:0.4
+mut_result:True
+38 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:network.25.0
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+39 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.6.2 layer_type: <class 'mindspore.nn.layer.activation.Sigmoid'> in_shape: (2, 128, 75, 75) out_shape: (2, 128, 75, 75)
+mut Basic type: True
+add Basic layer : 
+select insert layer: Sigmoid<>
+mut_result:True
+40 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.13.0
+layer type:Conv2d
+random_seed:175903
+mutation_ratio:0.4
+mut_result:True
+41 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: network.3.2 layer_type: <class 'mindspore.nn.layer.activation.ReLU6'> in_shape: [2, 64, 75, 75] out_shape: [2, 64, 75, 75]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+42 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.7.0
+layer type:Conv2d
+random_seed:175903
+mutation_ratio:0.4
+mut_result:True
+43 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.7.0
+layer type:Conv2d
+random_seed:175903
+mutation_ratio:0.4
+mut_result:True
+44 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:network.16.0
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+45 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.21.2
+layer type:ReLU6
+random_seed:175903
+mutation_ratio:0.4
+mut_result:True
+46 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:network.18.1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+47 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.20.0
+layer type:Conv2d
+random_seed:175904
+mutation_ratio:0.4
+mut_result:True
+48 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.13.0
+layer type:Conv2d
+random_seed:175904
+mutation_ratio:0.4
+mut_result:True
+49 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:network.13.0
+layer type:Conv2d
+random_seed:175905
+mutation_ratio:0.4
+mut_result:True
+50 generation!
+
