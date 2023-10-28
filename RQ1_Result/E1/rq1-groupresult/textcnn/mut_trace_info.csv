@@ -1,0 +1,101 @@
+mut_types,mut_layer_name,mut_result
+LD,drop,True
+LS,no,no suitable layer
+RA,layer2.1,True
+LC,no,LC set layers failure
+RA,no,RA set layers failure
+NAI,layer3.0,True
+NAI,layer2.0,True
+WS,layer3.0,True
+NS,fc,True
+LD,no,LD No suitable ops for
+WS,layer3.0,True
+GF,layer2,True
+LC,layer3.1,True
+LC,no,LC set layers failure
+LD,layer3.1,True
+WS,layer2.0,True
+NS,fc,True
+NS,layer1.0,True
+LA,layer2.1,True
+NS,fc,True
+GF,layer1,True
+LD,layer2.1,True
+RA,no,RA set layers failure
+GF,no,set layers failure
+NEB,layer2.0,True
+NS,layer3.0,True
+LS,no,no suitable layer
+GF,no,set layers failure
+NEB,layer2.0,True
+AFRM,no,set layers failure
+RA,no,RA set layers failure
+GF,no,set layers failure
+AFRM,no,set layers failure
+AFRM,no,set layers failure
+RA,no,False
+AFRM,no,AFRM No suitable ops for
+NS,layer2.0,True
+NEB,layer2.0,True
+LD,layer3.1,True
+LC,no,LC set layers failure
+NAI,fc,True
+RA,no,RA set layers failure
+GF,layer2.1,True
+NAI,layer2.0,True
+LD,layer2.1,True
+GF,embedding,True
+LD,no,LD No suitable ops for
+NAI,fc,True
+NEB,layer2.0,True
+NEB,layer2.0,True
+LD,no,LD No suitable ops for
+NAI,fc,True
+LA,no,LA set layers failure
+GF,layer2.2,True
+LS,no,no suitable layer
+NEB,layer2.0,True
+LC,no,LC set layers failure
+LS,no,no suitable layer
+LD,no,LD No suitable ops for
+NS,layer3.0,True
+NS,layer3.0,True
+LS,no,no suitable layer
+RA,no,RA set layers failure
+LD,no,LD No suitable ops for
+LC,no,LC No suitable ops for
+GF,layer2.2,True
+AFRM,no,set layers failure
+NEB,layer2.0,True
+LC,no,LC No suitable ops for
+NEB,layer2.0,True
+LC,no,LC No suitable ops for
+LA,no,LA set layers failure
+LS,no,no suitable layer
+AFRM,no,set layers failure
+RA,no,RA set layers failure
+NAI,fc,True
+LD,no,LD No suitable ops for
+LC,no,LC set layers failure
+RA,no,RA set layers failure
+RA,no,RA set layers failure
+AFRM,no,set layers failure
+LA,no,LA set layers failure
+GF,layer3.2,True
+LC,no,LC set layers failure
+NEB,layer2.0,True
+RA,no,RA set layers failure
+LD,no,LD No suitable ops for
+NS,fc,True
+NS,layer2.0,True
+NEB,layer2.0,True
+LC,no,LC set layers failure
+NS,layer1.0,True
+LD,no,LD No suitable ops for
+LS,no,no suitable layer
+NAI,layer3.0,True
+NAI,layer1.0,True
+NS,layer3.0,True
+AFRM,no,set layers failure
+RA,no,RA set layers failure
+NEB,layer2.0,True

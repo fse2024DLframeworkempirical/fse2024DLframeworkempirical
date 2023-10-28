@@ -1,0 +1,429 @@
+Adopt LD mut_strategy!
+delete layer_name:layer2.2.conv2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+1 generation!
+
+Adopt LS mut_strategy!
+switch layer1:layer1.0.relu
+switch layer2:layer1.2.bn3
+mut_result:False
+2 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer3.1.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 14, 14] out_shape: [2, 1024, 14, 14]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+3 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer2.3.bn3 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 512, 28, 28) out_shape: (2, 512, 28, 28)
+mut Basic type: True
+add Basic layer : 
+select insert layer: BatchNorm2d<num_features=512, eps=1e-05, momentum=0.9, gamma=Parameter (name=layer2.3.bn3.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=layer2.3.bn3.beta, shape=(512,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=layer2.3.bn3.moving_mean, shape=(512,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=layer2.3.bn3.moving_variance, shape=(512,), dtype=Float32, requires_grad=False)>
+mut_result:True
+4 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer2.3.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 512, 28, 28] out_shape: [2, 512, 28, 28]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+5 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer2.2.conv3
+layer type:Conv2d
+random_seed:64859
+mutation_ratio:0.4
+mut_result:True
+6 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.4.conv2
+layer type:Conv2d
+random_seed:64859
+mutation_ratio:0.4
+mut_result:True
+7 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer2.2.conv3
+layer type:Conv2d
+random_seed:64859
+mutation_ratio:0.4
+mut_result:True
+8 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.0.conv2
+layer type:Conv2d
+random_seed:64859
+mutation_ratio:0.4
+mut_result:True
+9 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:layer3.1.bn1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+10 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer2.2.conv3
+layer type:Conv2d
+random_seed:64900
+mutation_ratio:0.4
+mut_result:True
+11 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.0
+layer type:Bottleneck
+random_seed:64900
+mutation_ratio:0.4
+mut_result:True
+12 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer1.1.bn1 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 128, 56, 56) out_shape: (2, 128, 56, 56)
+mut Basic type: True
+add Basic layer : 
+select insert layer: BatchNorm2d<num_features=128, eps=1e-05, momentum=0.9, gamma=Parameter (name=layer1.1.bn1.gamma, shape=(128,), dtype=Float32, requires_grad=True), beta=Parameter (name=layer1.1.bn1.beta, shape=(128,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=layer1.1.bn1.moving_mean, shape=(128,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=layer1.1.bn1.moving_variance, shape=(128,), dtype=Float32, requires_grad=False)>
+mut_result:True
+13 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer1.1.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: (2, 256, 56, 56) out_shape: (2, 256, 56, 56)
+mut Basic type: True
+add Basic layer : 
+select insert layer: ReLU<>
+mut_result:True
+14 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:layer1.1.bn1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+15 generation!
+
+Adopt WS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.0.conv3
+layer type:Conv2d
+random_seed:64900
+mutation_ratio:0.4
+mut_result:True
+16 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer2.3.conv2
+layer type:Conv2d
+random_seed:64901
+mutation_ratio:0.4
+mut_result:True
+17 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.4.conv3
+layer type:Conv2d
+random_seed:64901
+mutation_ratio:0.4
+mut_result:True
+18 generation!
+
+Adopt LA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer3.3.bn2 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: [2, 512, 14, 14] out_shape: [2, 512, 14, 14]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Dense<input_channels=14, output_channels=14>
+insert_layer_outshape equal!
+mut_result:True
+19 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.5.conv1
+layer type:Conv2d
+random_seed:64901
+mutation_ratio:0.4
+mut_result:True
+20 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.5.bn2
+layer type:BatchNorm2d
+random_seed:64901
+mutation_ratio:0.4
+mut_result:True
+21 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:layer3.4.bn2
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+22 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer1.0.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 256, 56, 56] out_shape: [2, 256, 56, 56]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: ReLU<>
+insert_layer_outshape equal!
+mut_result:True
+23 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.3.bn3
+layer type:BatchNorm2d
+random_seed:64902
+mutation_ratio:0.4
+mut_result:True
+24 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.1.conv2
+layer type:Conv2d
+random_seed:64902
+mutation_ratio:0.4
+mut_result:True
+25 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer2.0.downsample.0
+layer type:Conv2d
+random_seed:64903
+mutation_ratio:0.4
+mut_result:True
+26 generation!
+
+Adopt LS mut_strategy!
+switch layer1:layer3.3.relu
+switch layer2:layer3.2.bn3
+mut_result:False
+27 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer2.2
+layer type:Bottleneck
+random_seed:64909
+mutation_ratio:0.4
+mut_result:True
+28 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.1.conv2
+layer type:Conv2d
+random_seed:64909
+mutation_ratio:0.4
+mut_result:True
+29 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:layer3.3.relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+30 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer2.3.relu layer_type: <class 'mindspore.nn.layer.activation.Sigmoid'> in_shape: [2, 512, 28, 28] out_shape: [2, 512, 28, 28]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Tanh<>
+insert_layer_outshape equal!
+mut_result:True
+31 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:maxpool
+layer type:MaxPool2d
+random_seed:64910
+mutation_ratio:0.4
+mut_result:True
+32 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:layer2.0.relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+33 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+34 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer3.1.relu layer_type: <class 'mindspore.nn.layer.activation.Sigmoid'> in_shape: [2, 1024, 14, 14] out_shape: [2, 1024, 14, 14]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Tanh<>
+insert_layer_outshape equal!
+mut_result:True
+35 generation!
+
+Adopt AFRM mut_strategy!
+delete layer_name:layer2.2.relu
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+36 generation!
+
+Adopt NS mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.3.conv2
+layer type:Conv2d
+random_seed:64911
+mutation_ratio:0.4
+mut_result:True
+37 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.1.conv2
+layer type:Conv2d
+random_seed:64911
+mutation_ratio:0.4
+mut_result:True
+38 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:layer2.1.bn1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+39 generation!
+
+Adopt LC mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer2.1.conv2 layer_type: <class 'mindspore.nn.layer.conv.Conv2d'> in_shape: (2, 256, 28, 28) out_shape: (2, 256, 28, 28)
+mut Basic type: True
+add Basic layer : 
+select insert layer: Conv2d<input_channels=256, output_channels=256, kernel_size=(3, 3), stride=(1, 1), pad_mode=pad, padding=1, dilation=(1, 1), group=1, has_bias=False, weight_init=normal, bias_init=zeros, format=NCHW>
+mut_result:True
+40 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:0
+select layer:layer2.1.conv2
+layer type:Conv2d
+random_seed:64912
+mutation_ratio:0.4
+mut_result:True
+41 generation!
+
+Adopt RA mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer: layer1.2.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 256, 56, 56] out_shape: [2, 256, 56, 56]
+mut Basic type: True
+add Basic layer : Basic_op
+select insert layer: Sigmoid<>
+insert_layer_outshape equal!
+mut_result:True
+42 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.2.relu
+layer type:Sigmoid
+random_seed:64912
+mutation_ratio:0.4
+mut_result:True
+43 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.2.conv1
+layer type:Conv2d
+random_seed:64912
+mutation_ratio:0.4
+mut_result:True
+44 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:layer3.0.bn1
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+45 generation!
+
+Adopt GF mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer3.1.conv3
+layer type:Conv2d
+random_seed:64912
+mutation_ratio:0.4
+mut_result:True
+46 generation!
+
+Adopt LD mut_strategy!
+delete layer_name:layer1.0.bn3
+candidate_in_mutlayers_indice:-1
+adopt DeleteCell EmptyCell
+mut_result:True
+47 generation!
+
+Adopt NAI mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.1.conv3
+layer type:Conv2d
+random_seed:64913
+mutation_ratio:0.4
+mut_result:True
+48 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.1.conv2
+layer type:Conv2d
+random_seed:64913
+mutation_ratio:0.4
+mut_result:True
+49 generation!
+
+Adopt NEB mut_strategy!
+candidate_in_mutlayers_indice:-1
+select layer:layer1.1.conv2
+layer type:Conv2d
+random_seed:64914
+mutation_ratio:0.4
+mut_result:True
+50 generation!
+

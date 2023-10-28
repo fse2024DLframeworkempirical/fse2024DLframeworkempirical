@@ -1,0 +1,1366 @@
+INFO 2023-10-26 13:18:45 - mutation_rq1.py:185 - Mutation config:
+--------------------------------------------------------------
+{'train_config': {'dataset_name': 'deeplab', 'batch_size': 2, 'input_size': ['(2,3,513,513)'], 'dtypes': ['float'], 'test_size': 2, 'epoch': 100, 'model_name': 'deeplabv3', 'backbone_location': 'None', 'loss_name': 'deepv3plusloss', 'device': 'GPU', 'device_id': 2, 'optimizer': 'SGD', 'learning_rate': 0.02, 'loss_ground_truth': 2.950969386100769, 'eval_ground_truth': 0.998740881321355, 'memory_threshold': '1e-2', 'dataset_path': '/data1/pzy/mindb/Pascal_VOC_deeplab/datamind/traindata0'}, 'mutation_config': {'mutator_strategy': 'random', 'mutation_iterations': 50, 'save_iterations': 3, 'mutation_eval_metric': 'origin_diff', 'select_mutmodel_nums': 1, 'validation_threshold': 0.005, 'output_difference_metric': 'DMAD', 'mutlog_path': './common/log'}}
+INFO 2023-10-26 13:18:45 - mutation_rq1.py:1404 - Stage1: start network mutation!
+WARNING 2023-10-26 13:18:59 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:19:02 - mutation_rq1.py:484 - ================== start 1 generation!(1/50) ==================
+INFO 2023-10-26 13:19:02 - model_mutation_operators.py:33 - Adopt LD mut_strategy!
+INFO 2023-10-26 13:19:02 - model_mutation_operators.py:64 - delete layer_name:resnet.layer3.21.bn2
+INFO 2023-10-26 13:19:02 - model_mutation_operators.py:113 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:02 - model_mutation_operators.py:117 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:02 - model_mutation_operators.py:198 - mut_result:True
+INFO 2023-10-26 13:19:02 - model_mutation_operators.py:199 - 1 generation!
+
+INFO 2023-10-26 13:19:02 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:03 - mutation_rq1.py:484 - ================== start 2 generation!(2/50) ==================
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:615 - Adopt LS mut_strategy!
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:647 - switch layer1:resnet.layer3.22.bn1 type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'>
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:648 - switch layer2:resnet.layer3.1.conv2 type: <class 'mindspore.nn.layer.conv.Conv2d'>
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:660 - mut_result:True
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:661 - 2 generation!
+
+
+INFO 2023-10-26 13:19:03 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:03 - mutation_rq1.py:484 - ================== start 3 generation!(3/50) ==================
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:812 - Adopt RA mut_strategy!
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:882 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:890 - select layer: resnet.layer1.1.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 256, 129, 129] out_shape: [2, 256, 129, 129]
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:891 - mut Basic type: True
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:892 - add Basic layer : Basic_op
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:901 - select insert layer: ReLU<>
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:907 - insert_layer_outshape equal!
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:943 - mut_result:True
+INFO 2023-10-26 13:19:03 - model_mutation_operators.py:944 - 3 generation!
+
+INFO 2023-10-26 13:19:03 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:04 - mutation_rq1.py:484 - ================== start 4 generation!(4/50) ==================
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:669 - Adopt LC mut_strategy!
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:753 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:756 - select layer: resnet.layer2.0.bn2 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 128, 65, 65) out_shape: (2, 128, 65, 65)
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:757 - mut Basic type: True
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:758 - add Basic layer : 
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:759 - select insert layer: BatchNorm2d<num_features=128, eps=1e-05, momentum=0.9, gamma=Parameter (name=resnet.layer2.0.bn2.gamma, shape=(128,), dtype=Float32, requires_grad=True), beta=Parameter (name=resnet.layer2.0.bn2.beta, shape=(128,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=resnet.layer2.0.bn2.moving_mean, shape=(128,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=resnet.layer2.0.bn2.moving_variance, shape=(128,), dtype=Float32, requires_grad=False)>
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:802 - mut_result:True
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:803 - 4 generation!
+
+INFO 2023-10-26 13:19:04 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:04 - mutation_rq1.py:484 - ================== start 5 generation!(5/50) ==================
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:812 - Adopt RA mut_strategy!
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:882 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:890 - select layer: resnet.layer3.0.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:891 - mut Basic type: True
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:892 - add Basic layer : Basic_op
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:901 - select insert layer: Tanh<>
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:907 - insert_layer_outshape equal!
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:943 - mut_result:True
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:944 - 5 generation!
+
+INFO 2023-10-26 13:19:04 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:04 - mutation_rq1.py:484 - ================== start 6 generation!(6/50) ==================
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:1467 - Adopt NAI mut_strategy!
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:1539 - select layer:resnet.layer3.10.conv3  layer_type:Conv2d
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:1581 - mut_result:True
+INFO 2023-10-26 13:19:04 - model_mutation_operators.py:1582 - 6 generation!
+
+INFO 2023-10-26 13:19:04 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:05 - mutation_rq1.py:484 - ================== start 7 generation!(7/50) ==================
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1467 - Adopt NAI mut_strategy!
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1539 - select layer:resnet.layer1.1.conv3  layer_type:Conv2d
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1581 - mut_result:True
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1582 - 7 generation!
+
+INFO 2023-10-26 13:19:05 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:05 - mutation_rq1.py:484 - ================== start 8 generation!(8/50) ==================
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:953 - Adopt WS mut_strategy!
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1008 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1033 - select layer:resnet.layer3.9.conv1  layer_type:Conv2d
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1082 - mut_result:True
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1083 - 8 generation!
+INFO 2023-10-26 13:19:05 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:05 - mutation_rq1.py:484 - ================== start 9 generation!(9/50) ==================
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1091 - Adopt NS mut_strategy!
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1131 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1173 - select layer:aspp.conv1  layer_type:Conv2d
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1217 - mut_result:True
+INFO 2023-10-26 13:19:05 - model_mutation_operators.py:1218 - 9 generation!
+
+INFO 2023-10-26 13:19:05 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:05 - mutation_rq1.py:484 - ================== start 10 generation!(10/50) ==================
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:33 - Adopt LD mut_strategy!
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:64 - delete layer_name:resnet.layer3.7.bn3
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:113 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:117 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:198 - mut_result:True
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:199 - 10 generation!
+
+INFO 2023-10-26 13:19:06 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:06 - mutation_rq1.py:484 - ================== start 11 generation!(11/50) ==================
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:953 - Adopt WS mut_strategy!
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1008 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1033 - select layer:resnet.layer3.4.conv1  layer_type:Conv2d
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1082 - mut_result:True
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1083 - 11 generation!
+INFO 2023-10-26 13:19:06 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:06 - mutation_rq1.py:484 - ================== start 12 generation!(12/50) ==================
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1228 - Adopt GF mut_strategy!
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1274 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1287 - select layer:resnet.layer3.8.conv3  layer_type:Conv2d
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1328 - mut_result:True
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:1329 - 12 generation!
+
+INFO 2023-10-26 13:19:06 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:06 - mutation_rq1.py:484 - ================== start 13 generation!(13/50) ==================
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:669 - Adopt LC mut_strategy!
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:753 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:756 - select layer: resnet.layer2.2.conv2 layer_type: <class 'mindspore.nn.layer.conv.Conv2d'> in_shape: (2, 128, 65, 65) out_shape: (2, 128, 65, 65)
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:757 - mut Basic type: True
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:758 - add Basic layer : 
+INFO 2023-10-26 13:19:06 - model_mutation_operators.py:759 - select insert layer: Conv2d<input_channels=128, output_channels=128, kernel_size=(3, 3), stride=(1, 1), pad_mode=pad, padding=1, dilation=(1, 1), group=1, has_bias=False, weight_init=xavier_uniform, bias_init=zeros, format=NCHW>
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:802 - mut_result:True
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:803 - 13 generation!
+
+INFO 2023-10-26 13:19:07 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:07 - mutation_rq1.py:484 - ================== start 14 generation!(14/50) ==================
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:669 - Adopt LC mut_strategy!
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:753 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:756 - select layer: resnet.layer4.1.bn1 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 512, 33, 33) out_shape: (2, 512, 33, 33)
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:757 - mut Basic type: True
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:758 - add Basic layer : 
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:759 - select insert layer: BatchNorm2d<num_features=512, eps=1e-05, momentum=0.9, gamma=Parameter (name=resnet.layer4.1.bn1.gamma, shape=(512,), dtype=Float32, requires_grad=True), beta=Parameter (name=resnet.layer4.1.bn1.beta, shape=(512,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=resnet.layer4.1.bn1.moving_mean, shape=(512,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=resnet.layer4.1.bn1.moving_variance, shape=(512,), dtype=Float32, requires_grad=False)>
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:802 - mut_result:True
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:803 - 14 generation!
+
+INFO 2023-10-26 13:19:07 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:07 - mutation_rq1.py:484 - ================== start 15 generation!(15/50) ==================
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:33 - Adopt LD mut_strategy!
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:64 - delete layer_name:aspp.aspp2.aspp_conv.1
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:113 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:117 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:198 - mut_result:True
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:199 - 15 generation!
+
+INFO 2023-10-26 13:19:07 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:07 - mutation_rq1.py:484 - ================== start 16 generation!(16/50) ==================
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:953 - Adopt WS mut_strategy!
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:1008 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:1033 - select layer:resnet.layer2.0.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:1082 - mut_result:True
+INFO 2023-10-26 13:19:07 - model_mutation_operators.py:1083 - 16 generation!
+INFO 2023-10-26 13:19:07 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:08 - mutation_rq1.py:484 - ================== start 17 generation!(17/50) ==================
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1091 - Adopt NS mut_strategy!
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1131 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1173 - select layer:resnet.layer1.1.conv3  layer_type:Conv2d
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1217 - mut_result:True
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1218 - 17 generation!
+
+INFO 2023-10-26 13:19:08 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:08 - mutation_rq1.py:484 - ================== start 18 generation!(18/50) ==================
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1091 - Adopt NS mut_strategy!
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1131 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1173 - select layer:resnet.layer4.1.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1217 - mut_result:True
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:1218 - 18 generation!
+
+INFO 2023-10-26 13:19:08 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:08 - mutation_rq1.py:484 - ================== start 19 generation!(19/50) ==================
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:381 - Adopt LA mut_strategy!
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:480 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:492 - select layer: resnet.layer3.15.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:493 - mut Basic type: True
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:494 - add Basic layer : Basic_op
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:530 - select insert layer: MaxPool2d<kernel_size=1, stride=1, pad_mode=VALID>
+INFO 2023-10-26 13:19:08 - model_mutation_operators.py:534 - insert_layer_outshape equal!
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:606 - mut_result:True
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:607 - 19 generation!
+
+INFO 2023-10-26 13:19:09 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:09 - mutation_rq1.py:484 - ================== start 20 generation!(20/50) ==================
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1091 - Adopt NS mut_strategy!
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1131 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1173 - select layer:resnet.layer2.3.conv1  layer_type:Conv2d
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1217 - mut_result:True
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1218 - 20 generation!
+
+INFO 2023-10-26 13:19:09 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:09 - mutation_rq1.py:484 - ================== start 21 generation!(21/50) ==================
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1228 - Adopt GF mut_strategy!
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1274 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1287 - select layer:resnet.layer3.21.conv1  layer_type:Conv2d
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1328 - mut_result:True
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:1329 - 21 generation!
+
+INFO 2023-10-26 13:19:09 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:09 - mutation_rq1.py:484 - ================== start 22 generation!(22/50) ==================
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:33 - Adopt LD mut_strategy!
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:64 - delete layer_name:resnet.layer1.0.conv1
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:113 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:117 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:198 - mut_result:True
+INFO 2023-10-26 13:19:09 - model_mutation_operators.py:199 - 22 generation!
+
+INFO 2023-10-26 13:19:09 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:10 - mutation_rq1.py:484 - ================== start 23 generation!(23/50) ==================
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:812 - Adopt RA mut_strategy!
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:882 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:890 - select layer: resnet.layer1.1.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 256, 129, 129] out_shape: [2, 256, 129, 129]
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:891 - mut Basic type: True
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:892 - add Basic layer : Basic_op
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:901 - select insert layer: Sigmoid<>
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:907 - insert_layer_outshape equal!
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:943 - mut_result:True
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:944 - 23 generation!
+
+INFO 2023-10-26 13:19:10 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:10 - mutation_rq1.py:484 - ================== start 24 generation!(24/50) ==================
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:1228 - Adopt GF mut_strategy!
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:1274 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:1287 - select layer:resnet.layer3.19.bn2  layer_type:BatchNorm2d
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:1328 - mut_result:True
+INFO 2023-10-26 13:19:10 - model_mutation_operators.py:1329 - 24 generation!
+
+INFO 2023-10-26 13:19:10 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:11 - mutation_rq1.py:484 - ================== start 25 generation!(25/50) ==================
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1340 - Adopt NEB mut_strategy!
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1378 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1418 - select layer:resnet.layer3.7.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1458 - mut_result:True
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1459 - 25 generation!
+INFO 2023-10-26 13:19:11 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:11 - mutation_rq1.py:484 - ================== start 26 generation!(26/50) ==================
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1091 - Adopt NS mut_strategy!
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1131 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1173 - select layer:resnet.layer3.9.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1217 - mut_result:True
+INFO 2023-10-26 13:19:11 - model_mutation_operators.py:1218 - 26 generation!
+
+INFO 2023-10-26 13:19:11 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:12 - mutation_rq1.py:484 - ================== start 27 generation!(27/50) ==================
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:615 - Adopt LS mut_strategy!
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:647 - switch layer1:resnet.layer3.5.bn2 type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'>
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:648 - switch layer2:resnet.layer3.2.conv2 type: <class 'mindspore.nn.layer.conv.Conv2d'>
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:660 - mut_result:True
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:661 - 27 generation!
+
+
+INFO 2023-10-26 13:19:12 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:12 - mutation_rq1.py:484 - ================== start 28 generation!(28/50) ==================
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:1228 - Adopt GF mut_strategy!
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:1270 - candidate_in_mutlayers_indice:0
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:1287 - select layer:resnet.layer4.1.bn1  layer_type:BatchNorm2d
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:1328 - mut_result:True
+INFO 2023-10-26 13:19:12 - model_mutation_operators.py:1329 - 28 generation!
+
+INFO 2023-10-26 13:19:12 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:12 - mutation_rq1.py:484 - ================== start 29 generation!(29/50) ==================
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:1340 - Adopt NEB mut_strategy!
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:1378 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:1418 - select layer:resnet.layer3.7.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:1458 - mut_result:True
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:1459 - 29 generation!
+INFO 2023-10-26 13:19:13 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:13 - mutation_rq1.py:484 - ================== start 30 generation!(30/50) ==================
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:207 - Adopt AFRM mut_strategy!
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:236 - delete layer_name:resnet.layer2.0.relu
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:286 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:290 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:372 - mut_result:True
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:373 - 30 generation!
+
+INFO 2023-10-26 13:19:13 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:13 - mutation_rq1.py:484 - ================== start 31 generation!(31/50) ==================
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:812 - Adopt RA mut_strategy!
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:882 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:890 - select layer: resnet.layer3.10.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:891 - mut Basic type: True
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:892 - add Basic layer : Basic_op
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:901 - select insert layer: Tanh<>
+INFO 2023-10-26 13:19:13 - model_mutation_operators.py:907 - insert_layer_outshape equal!
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:943 - mut_result:True
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:944 - 31 generation!
+
+INFO 2023-10-26 13:19:14 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:14 - mutation_rq1.py:484 - ================== start 32 generation!(32/50) ==================
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:1228 - Adopt GF mut_strategy!
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:1274 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:1287 - select layer:resnet.layer4.0.bn2  layer_type:BatchNorm2d
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:1328 - mut_result:True
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:1329 - 32 generation!
+
+INFO 2023-10-26 13:19:14 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:14 - mutation_rq1.py:484 - ================== start 33 generation!(33/50) ==================
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:207 - Adopt AFRM mut_strategy!
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:236 - delete layer_name:resnet.layer3.10.relu
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:286 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:290 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:372 - mut_result:True
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:373 - 33 generation!
+
+INFO 2023-10-26 13:19:14 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:14 - mutation_rq1.py:484 - ================== start 34 generation!(34/50) ==================
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:207 - Adopt AFRM mut_strategy!
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:236 - delete layer_name:resnet.layer3.9.relu
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:286 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:14 - model_mutation_operators.py:290 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:372 - mut_result:True
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:373 - 34 generation!
+
+INFO 2023-10-26 13:19:15 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:15 - mutation_rq1.py:484 - ================== start 35 generation!(35/50) ==================
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:812 - Adopt RA mut_strategy!
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:882 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:890 - select layer: resnet.layer4.2.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 2048, 33, 33] out_shape: [2, 2048, 33, 33]
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:891 - mut Basic type: True
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:892 - add Basic layer : Basic_op
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:901 - select insert layer: ReLU<>
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:907 - insert_layer_outshape equal!
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:943 - mut_result:True
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:944 - 35 generation!
+
+INFO 2023-10-26 13:19:15 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:15 - mutation_rq1.py:484 - ================== start 36 generation!(36/50) ==================
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:207 - Adopt AFRM mut_strategy!
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:236 - delete layer_name:resnet.layer3.20.relu
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:286 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:290 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:372 - mut_result:True
+INFO 2023-10-26 13:19:15 - model_mutation_operators.py:373 - 36 generation!
+
+INFO 2023-10-26 13:19:15 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:16 - mutation_rq1.py:484 - ================== start 37 generation!(37/50) ==================
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1091 - Adopt NS mut_strategy!
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1131 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1173 - select layer:resnet.layer3.22.conv3  layer_type:Conv2d
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1217 - mut_result:True
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1218 - 37 generation!
+
+INFO 2023-10-26 13:19:16 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:16 - mutation_rq1.py:484 - ================== start 38 generation!(38/50) ==================
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1340 - Adopt NEB mut_strategy!
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1378 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1418 - select layer:resnet.layer3.7.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1458 - mut_result:True
+INFO 2023-10-26 13:19:16 - model_mutation_operators.py:1459 - 38 generation!
+INFO 2023-10-26 13:19:16 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:17 - mutation_rq1.py:484 - ================== start 39 generation!(39/50) ==================
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:33 - Adopt LD mut_strategy!
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:64 - delete layer_name:resnet.layer1.1.conv2
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:113 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:117 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:198 - mut_result:True
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:199 - 39 generation!
+
+INFO 2023-10-26 13:19:17 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:17 - mutation_rq1.py:484 - ================== start 40 generation!(40/50) ==================
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:669 - Adopt LC mut_strategy!
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:753 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:756 - select layer: resnet.layer3.18.bn3 layer_type: <class 'mindspore.nn.layer.normalization.BatchNorm2d'> in_shape: (2, 1024, 33, 33) out_shape: (2, 1024, 33, 33)
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:757 - mut Basic type: True
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:758 - add Basic layer : 
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:759 - select insert layer: BatchNorm2d<num_features=1024, eps=1e-05, momentum=0.9, gamma=Parameter (name=resnet.layer3.18.bn3.gamma, shape=(1024,), dtype=Float32, requires_grad=True), beta=Parameter (name=resnet.layer3.18.bn3.beta, shape=(1024,), dtype=Float32, requires_grad=True), moving_mean=Parameter (name=resnet.layer3.18.bn3.moving_mean, shape=(1024,), dtype=Float32, requires_grad=False), moving_variance=Parameter (name=resnet.layer3.18.bn3.moving_variance, shape=(1024,), dtype=Float32, requires_grad=False)>
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:802 - mut_result:True
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:803 - 40 generation!
+
+INFO 2023-10-26 13:19:17 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:17 - mutation_rq1.py:484 - ================== start 41 generation!(41/50) ==================
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:1467 - Adopt NAI mut_strategy!
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:1539 - select layer:resnet.layer3.13.conv3  layer_type:Conv2d
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:1581 - mut_result:True
+INFO 2023-10-26 13:19:17 - model_mutation_operators.py:1582 - 41 generation!
+
+INFO 2023-10-26 13:19:17 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:18 - mutation_rq1.py:484 - ================== start 42 generation!(42/50) ==================
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:812 - Adopt RA mut_strategy!
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:882 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:890 - select layer: resnet.layer3.1.relu layer_type: <class 'mindspore.nn.layer.activation.ReLU'> in_shape: [2, 1024, 33, 33] out_shape: [2, 1024, 33, 33]
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:891 - mut Basic type: True
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:892 - add Basic layer : Basic_op
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:901 - select insert layer: Tanh<>
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:907 - insert_layer_outshape equal!
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:943 - mut_result:True
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:944 - 42 generation!
+
+INFO 2023-10-26 13:19:18 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:18 - mutation_rq1.py:484 - ================== start 43 generation!(43/50) ==================
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:1228 - Adopt GF mut_strategy!
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:1274 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:1287 - select layer:aspp.aspp3  layer_type:ASPPConv
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:1328 - mut_result:True
+INFO 2023-10-26 13:19:18 - model_mutation_operators.py:1329 - 43 generation!
+
+INFO 2023-10-26 13:19:18 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:19 - mutation_rq1.py:484 - ================== start 44 generation!(44/50) ==================
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1467 - Adopt NAI mut_strategy!
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1539 - select layer:resnet.layer3.17.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1581 - mut_result:True
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1582 - 44 generation!
+
+INFO 2023-10-26 13:19:19 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:19 - mutation_rq1.py:484 - ================== start 45 generation!(45/50) ==================
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:33 - Adopt LD mut_strategy!
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:64 - delete layer_name:resnet.layer3.2.conv2
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:113 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:117 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:198 - mut_result:True
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:199 - 45 generation!
+
+INFO 2023-10-26 13:19:19 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:19 - mutation_rq1.py:484 - ================== start 46 generation!(46/50) ==================
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1228 - Adopt GF mut_strategy!
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1274 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1287 - select layer:resnet.layer3.20.bn3  layer_type:BatchNorm2d
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1328 - mut_result:True
+INFO 2023-10-26 13:19:19 - model_mutation_operators.py:1329 - 46 generation!
+
+INFO 2023-10-26 13:19:19 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:20 - mutation_rq1.py:484 - ================== start 47 generation!(47/50) ==================
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:33 - Adopt LD mut_strategy!
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:64 - delete layer_name:resnet.layer3.8.bn2
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:113 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:117 - adopt DeleteCell EmptyCell
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:198 - mut_result:True
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:199 - 47 generation!
+
+INFO 2023-10-26 13:19:20 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:20 - mutation_rq1.py:484 - ================== start 48 generation!(48/50) ==================
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:1467 - Adopt NAI mut_strategy!
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:1503 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:1539 - select layer:resnet.layer4.2.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:1581 - mut_result:True
+INFO 2023-10-26 13:19:20 - model_mutation_operators.py:1582 - 48 generation!
+
+INFO 2023-10-26 13:19:20 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:20 - mutation_rq1.py:484 - ================== start 49 generation!(49/50) ==================
+INFO 2023-10-26 13:19:21 - model_mutation_operators.py:1340 - Adopt NEB mut_strategy!
+INFO 2023-10-26 13:19:21 - model_mutation_operators.py:1378 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:21 - model_mutation_operators.py:1418 - select layer:resnet.layer3.7.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:21 - model_mutation_operators.py:1458 - mut_result:True
+INFO 2023-10-26 13:19:21 - model_mutation_operators.py:1459 - 49 generation!
+INFO 2023-10-26 13:19:21 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:21 - mutation_rq1.py:484 - ================== start 50 generation!(50/50) ==================
+INFO 2023-10-26 13:19:22 - model_mutation_operators.py:1340 - Adopt NEB mut_strategy!
+INFO 2023-10-26 13:19:22 - model_mutation_operators.py:1378 - candidate_in_mutlayers_indice:-1
+INFO 2023-10-26 13:19:22 - model_mutation_operators.py:1418 - select layer:resnet.layer3.7.conv2  layer_type:Conv2d
+INFO 2023-10-26 13:19:22 - model_mutation_operators.py:1458 - mut_result:True
+INFO 2023-10-26 13:19:22 - model_mutation_operators.py:1459 - 50 generation!
+INFO 2023-10-26 13:19:22 - mutation_rq1.py:493 - 1:True
+INFO 2023-10-26 13:19:22 - mutation_rq1.py:508 - mutation_scores: [0.24318285, 5.353582, 5.353582, 10.724064, 6.377754, 6.883557, 6.9908533, 7.0786943, 7.1000843, 6.6571193, 6.9010115, 6.9352093, 6.8416553, 6.62675, 6.4673157, 6.9364, 6.9433784, 6.9428315, 6.9428315, 6.931181, 6.9372516, 6.2525883, 7.256382, 7.256675, 7.263259, 7.263771, 32.990463, 33.22109, 33.199127, 33.390385, 1.7885396, 1.7963251, 33.26196, 30.124804, 30.124804, 30.171867, 30.00219, 30.093624, 32.074486, 85.03635, 93.64386, 24.245758, 24.227528, 24.048988, 3.897665, 3.897303, 4.7101555, 7.052307, 7.0052686, 7.0182123]
+INFO 2023-10-26 13:19:22 - mutation_rq1.py:478 - mutation iteration:50, mutation success:50
+
+INFO 2023-10-26 13:19:22 - mutation_rq1.py:479 - mutation type:{'AFRM': 4, 'LA': 1, 'LD': 7, 'LC': 4, 'LS': 2, 'RA': 6, 'WS': 3, 'NS': 6, 'NAI': 5, 'NEB': 5, 'GF': 7}
+
+INFO 2023-10-26 13:19:22 - mutation_rq1.py:1406 - Stage2: select models by mutation score
+WARNING 2023-10-26 13:19:33 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:19:38 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:19:38 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:19:38 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:19:38 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:19:39 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:19:39 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:19:39 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:19:39 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:19:39 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:19:39 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:19:39 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:19:39 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:19:39 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:19:40 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:19:40 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:19:40 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:19:40 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:19:40 - mutation_main_followlog.py:397 - torch_mut_result: True
+WARNING 2023-10-26 13:23:12 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:23:16 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:23:16 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:23:16 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:23:16 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:23:17 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:23:18 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:23:18 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:23:18 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:23:18 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:23:18 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:23:18 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:23:18 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:23:19 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:23:19 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:23:19 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:23:19 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:23:20 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:23:20 - mutation_main_followlog.py:176 - torch_mut_result: True
+WARNING 2023-10-26 13:26:52 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:26:57 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:26:57 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:26:57 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:26:57 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:26:57 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:26:57 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:26:58 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:26:59 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:26:59 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:26:59 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:26:59 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:26:59 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:26:59 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:26:59 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:26:59 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:26:59 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:26:59 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:26:59 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:27:00 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:27:00 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:27:00 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:27:00 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:27:00 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:27:01 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:27:01 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:27:01 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:27:01 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:27:01 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:27:01 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:27:02 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:27:02 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:27:02 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:27:02 - mutation_main_followlog.py:176 - torch_mut_result: True
+WARNING 2023-10-26 13:30:36 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:30:40 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:30:40 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:30:40 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:30:40 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:30:41 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1113 - generation: 16
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1113 - generation: 17
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1113 - generation: 18
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:30:42 - model_mutation_operators_follow_log.py:1195 - generation: 19
+INFO 2023-10-26 13:30:43 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:30:43 - model_mutation_operators_follow_log.py:1113 - generation: 20
+INFO 2023-10-26 13:30:43 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:30:43 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:30:43 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:30:43 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:30:43 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:30:44 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:30:44 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:30:44 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:30:44 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:44 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:44 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:45 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:45 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:30:45 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:45 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:45 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:30:46 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:30:46 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:30:46 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:30:46 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:30:46 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:46 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:47 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:30:47 - mutation_main_followlog.py:299 - generation: 19
+INFO 2023-10-26 13:30:47 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:30:47 - mutation_main_followlog.py:292 - torch_mut_result: True
+WARNING 2023-10-26 13:34:22 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:27 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:28 - model_mutation_operators_follow_log.py:1113 - generation: 16
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1113 - generation: 17
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1113 - generation: 18
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1195 - generation: 19
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1113 - generation: 20
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1113 - generation: 21
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:995 - generation: 22
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:34:29 - model_mutation_operators_follow_log.py:1195 - generation: 23
+INFO 2023-10-26 13:34:30 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:30 - model_mutation_operators_follow_log.py:1113 - generation: 24
+INFO 2023-10-26 13:34:30 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:34:30 - model_mutation_operators_follow_log.py:1113 - generation: 25
+INFO 2023-10-26 13:34:30 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:34:30 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:34:30 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:34:30 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:34:30 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:34:31 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:34:31 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:34:31 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:34:31 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:31 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:31 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:32 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:32 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:34:32 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:32 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:32 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:34:33 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:34:33 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:34:33 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:34:33 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:34:33 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:33 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:34 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:34 - mutation_main_followlog.py:299 - generation: 19
+INFO 2023-10-26 13:34:34 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:34:34 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:34 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:35 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:34:35 - mutation_main_followlog.py:299 - generation: 23
+INFO 2023-10-26 13:34:35 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:34:35 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:34:35 - mutation_main_followlog.py:292 - torch_mut_result: True
+WARNING 2023-10-26 13:38:07 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:12 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:38:13 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1113 - generation: 16
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1113 - generation: 17
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1113 - generation: 18
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1195 - generation: 19
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1113 - generation: 20
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1113 - generation: 21
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:995 - generation: 22
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:38:14 - model_mutation_operators_follow_log.py:1195 - generation: 23
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1113 - generation: 24
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1113 - generation: 25
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1113 - generation: 26
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1034 - generation: 27
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1113 - generation: 28
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:1113 - generation: 29
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:38:15 - model_mutation_operators_follow_log.py:995 - generation: 30
+INFO 2023-10-26 13:38:15 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:38:15 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:38:15 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:38:16 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:38:16 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:38:16 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:38:16 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:38:16 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:38:17 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:17 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:17 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:17 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:17 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:38:18 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:18 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:18 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:38:18 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:38:18 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:38:18 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:38:19 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:38:19 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:19 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:19 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:19 - mutation_main_followlog.py:299 - generation: 19
+INFO 2023-10-26 13:38:19 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:38:20 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:20 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:20 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:38:20 - mutation_main_followlog.py:299 - generation: 23
+INFO 2023-10-26 13:38:21 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:38:21 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:21 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:21 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:21 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:38:22 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:22 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:38:22 - mutation_main_followlog.py:176 - torch_mut_result: True
+WARNING 2023-10-26 13:41:54 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:41:59 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1113 - generation: 16
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:00 - model_mutation_operators_follow_log.py:1113 - generation: 17
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1113 - generation: 18
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1195 - generation: 19
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1113 - generation: 20
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1113 - generation: 21
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:995 - generation: 22
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1195 - generation: 23
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:01 - model_mutation_operators_follow_log.py:1113 - generation: 24
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1113 - generation: 25
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1113 - generation: 26
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1034 - generation: 27
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1113 - generation: 28
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1113 - generation: 29
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:995 - generation: 30
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1195 - generation: 31
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:1113 - generation: 32
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:995 - generation: 33
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:42:02 - model_mutation_operators_follow_log.py:995 - generation: 34
+INFO 2023-10-26 13:42:03 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:42:03 - model_mutation_operators_follow_log.py:1195 - generation: 35
+INFO 2023-10-26 13:42:03 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:42:03 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:42:03 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:42:03 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:03 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:42:04 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:04 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:42:04 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:04 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:04 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:04 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:05 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:05 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:42:05 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:05 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:05 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:42:06 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:06 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:42:06 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:06 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:42:06 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:06 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:07 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:07 - mutation_main_followlog.py:299 - generation: 19
+INFO 2023-10-26 13:42:07 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:07 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:07 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:08 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:42:08 - mutation_main_followlog.py:299 - generation: 23
+INFO 2023-10-26 13:42:08 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:08 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:08 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:09 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:09 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:42:09 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:09 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:09 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:42:09 - mutation_main_followlog.py:299 - generation: 31
+INFO 2023-10-26 13:42:10 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:42:10 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:42:10 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:42:10 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:42:10 - mutation_main_followlog.py:299 - generation: 35
+INFO 2023-10-26 13:42:11 - mutation_main_followlog.py:397 - torch_mut_result: True
+WARNING 2023-10-26 13:45:44 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:49 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:50 - model_mutation_operators_follow_log.py:1113 - generation: 16
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1113 - generation: 17
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1113 - generation: 18
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1195 - generation: 19
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1113 - generation: 20
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1113 - generation: 21
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:995 - generation: 22
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:51 - model_mutation_operators_follow_log.py:1195 - generation: 23
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1113 - generation: 24
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1113 - generation: 25
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1113 - generation: 26
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1034 - generation: 27
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1113 - generation: 28
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1113 - generation: 29
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:995 - generation: 30
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1195 - generation: 31
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:1113 - generation: 32
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:52 - model_mutation_operators_follow_log.py:995 - generation: 33
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:995 - generation: 34
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1195 - generation: 35
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:995 - generation: 36
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1113 - generation: 37
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1113 - generation: 38
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:995 - generation: 39
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:45:53 - model_mutation_operators_follow_log.py:1195 - generation: 40
+INFO 2023-10-26 13:45:53 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:45:54 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:45:54 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:45:54 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:45:54 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:45:54 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:45:54 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:45:55 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:45:55 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:55 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:55 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:55 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:56 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:45:56 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:56 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:56 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:45:56 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:45:56 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:45:56 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:45:57 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:45:57 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:57 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:57 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:57 - mutation_main_followlog.py:299 - generation: 19
+INFO 2023-10-26 13:45:58 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:45:58 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:58 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:58 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:45:58 - mutation_main_followlog.py:299 - generation: 23
+INFO 2023-10-26 13:45:59 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:45:59 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:59 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:45:59 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:46:00 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:46:00 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:46:00 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:46:00 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:46:00 - mutation_main_followlog.py:299 - generation: 31
+INFO 2023-10-26 13:46:00 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:46:01 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:46:01 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:46:01 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:46:01 - mutation_main_followlog.py:299 - generation: 35
+INFO 2023-10-26 13:46:01 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:46:02 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:46:02 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:46:02 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:46:02 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:46:02 - mutation_main_followlog.py:299 - generation: 40
+INFO 2023-10-26 13:46:02 - mutation_main_followlog.py:397 - torch_mut_result: True
+WARNING 2023-10-26 13:49:36 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:41 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:42 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1113 - generation: 16
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1113 - generation: 17
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1113 - generation: 18
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1195 - generation: 19
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1113 - generation: 20
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:1113 - generation: 21
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:43 - model_mutation_operators_follow_log.py:995 - generation: 22
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1195 - generation: 23
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1113 - generation: 24
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1113 - generation: 25
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1113 - generation: 26
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1034 - generation: 27
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1113 - generation: 28
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:44 - model_mutation_operators_follow_log.py:1113 - generation: 29
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:995 - generation: 30
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1195 - generation: 31
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1113 - generation: 32
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:995 - generation: 33
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:995 - generation: 34
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1195 - generation: 35
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:995 - generation: 36
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:45 - model_mutation_operators_follow_log.py:1113 - generation: 37
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1113 - generation: 38
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:995 - generation: 39
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1195 - generation: 40
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1113 - generation: 41
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1195 - generation: 42
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:46 - model_mutation_operators_follow_log.py:1113 - generation: 43
+INFO 2023-10-26 13:49:47 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:49:47 - model_mutation_operators_follow_log.py:1113 - generation: 44
+INFO 2023-10-26 13:49:47 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:49:47 - model_mutation_operators_follow_log.py:995 - generation: 45
+INFO 2023-10-26 13:49:47 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:47 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:49:47 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:49:47 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:47 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:49:48 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:48 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:49:48 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:48 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:48 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:49 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:49 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:49 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:49 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:49 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:49 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:49:50 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:50 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:49:50 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:50 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:50 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:51 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:51 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:51 - mutation_main_followlog.py:299 - generation: 19
+INFO 2023-10-26 13:49:51 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:51 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:52 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:52 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:52 - mutation_main_followlog.py:299 - generation: 23
+INFO 2023-10-26 13:49:52 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:52 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:53 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:53 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:53 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:49:53 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:53 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:54 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:54 - mutation_main_followlog.py:299 - generation: 31
+INFO 2023-10-26 13:49:54 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:54 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:54 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:54 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:54 - mutation_main_followlog.py:299 - generation: 35
+INFO 2023-10-26 13:49:55 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:55 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:55 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:55 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:56 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:49:56 - mutation_main_followlog.py:299 - generation: 40
+INFO 2023-10-26 13:49:56 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:56 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:56 - mutation_main_followlog.py:299 - generation: 42
+INFO 2023-10-26 13:49:56 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:49:57 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:57 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:49:57 - mutation_main_followlog.py:176 - torch_mut_result: True
+WARNING 2023-10-26 13:53:30 - log.py:94 - [*User Attention*] The PTH has been converted to the checkpoint of MindSpore. Please check whether the conversion result is correct. The saved path is: ./convert_ms.ckpt
+INFO 2023-10-26 13:53:35 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:35 - model_mutation_operators_follow_log.py:995 - generation: 1
+INFO 2023-10-26 13:53:35 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:53:35 - model_mutation_operators_follow_log.py:1034 - generation: 2
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1195 - generation: 3
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1195 - generation: 4
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1195 - generation: 5
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1113 - generation: 6
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1113 - generation: 7
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1113 - generation: 8
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:1113 - generation: 9
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:36 - model_mutation_operators_follow_log.py:995 - generation: 10
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1113 - generation: 11
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1113 - generation: 12
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1195 - generation: 13
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1195 - generation: 14
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:995 - generation: 15
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1113 - generation: 16
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1113 - generation: 17
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:37 - model_mutation_operators_follow_log.py:1113 - generation: 18
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1195 - generation: 19
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1113 - generation: 20
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1113 - generation: 21
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:995 - generation: 22
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1195 - generation: 23
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1113 - generation: 24
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1113 - generation: 25
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:38 - model_mutation_operators_follow_log.py:1113 - generation: 26
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1032 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1034 - generation: 27
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1113 - generation: 28
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1113 - generation: 29
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:995 - generation: 30
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1195 - generation: 31
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:1113 - generation: 32
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:995 - generation: 33
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:39 - model_mutation_operators_follow_log.py:995 - generation: 34
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1195 - generation: 35
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:995 - generation: 36
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1113 - generation: 37
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1113 - generation: 38
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:995 - generation: 39
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1195 - generation: 40
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1113 - generation: 41
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1194 - ms_mut_result: True
+INFO 2023-10-26 13:53:40 - model_mutation_operators_follow_log.py:1195 - generation: 42
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1113 - generation: 43
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1113 - generation: 44
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:995 - generation: 45
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1113 - generation: 46
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:994 - ms_mut_result: True
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:995 - generation: 47
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1113 - generation: 48
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:41 - model_mutation_operators_follow_log.py:1113 - generation: 49
+INFO 2023-10-26 13:53:42 - model_mutation_operators_follow_log.py:1112 - ms_mut_result: True
+INFO 2023-10-26 13:53:42 - model_mutation_operators_follow_log.py:1113 - generation: 50
+INFO 2023-10-26 13:53:42 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:42 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:53:42 - mutation_main_followlog.py:299 - generation: 3
+INFO 2023-10-26 13:53:42 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:42 - mutation_main_followlog.py:299 - generation: 4
+INFO 2023-10-26 13:53:42 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:42 - mutation_main_followlog.py:299 - generation: 5
+INFO 2023-10-26 13:53:43 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:43 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:43 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:43 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:44 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:44 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:44 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:44 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:44 - mutation_main_followlog.py:299 - generation: 13
+INFO 2023-10-26 13:53:45 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:45 - mutation_main_followlog.py:299 - generation: 14
+INFO 2023-10-26 13:53:45 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:45 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:45 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:45 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:46 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:46 - mutation_main_followlog.py:299 - generation: 19
+INFO 2023-10-26 13:53:46 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:46 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:46 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:47 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:47 - mutation_main_followlog.py:299 - generation: 23
+INFO 2023-10-26 13:53:47 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:47 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:47 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:48 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:48 - mutation_main_followlog.py:215 - torch_mut_result: True
+INFO 2023-10-26 13:53:48 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:48 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:48 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:48 - mutation_main_followlog.py:299 - generation: 31
+INFO 2023-10-26 13:53:49 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:49 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:49 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:49 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:49 - mutation_main_followlog.py:299 - generation: 35
+INFO 2023-10-26 13:53:50 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:50 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:50 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:50 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:50 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:50 - mutation_main_followlog.py:299 - generation: 40
+INFO 2023-10-26 13:53:51 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:51 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:51 - mutation_main_followlog.py:299 - generation: 42
+INFO 2023-10-26 13:53:51 - mutation_main_followlog.py:397 - torch_mut_result: True
+INFO 2023-10-26 13:53:52 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:52 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:52 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:52 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:52 - mutation_main_followlog.py:176 - torch_mut_result: True
+INFO 2023-10-26 13:53:53 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:53 - mutation_main_followlog.py:292 - torch_mut_result: True
+INFO 2023-10-26 13:53:53 - mutation_main_followlog.py:292 - torch_mut_result: True
