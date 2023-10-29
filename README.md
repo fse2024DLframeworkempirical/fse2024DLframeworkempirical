@@ -13,7 +13,7 @@ During the mutation process, we used the ONNX and onnx2keras frameworks to trans
 | E2 | 1.9.0   | 2.0.0     | 2.13.0     | 1.14.0 | 0.0.24     |
 | E3 | 1.10.1  | 2.1.0     | 2.13.0     | 1.14.0 | 0.0.24     |
 
-
+In addition, we have reported the framework issues detected during our experiments in the 'issue_detected. xlsx' file, which we have submitted to the framework repository. Among them, the first column is the description of the content of the questionnaire, the second column is whether the questionnaire has been confirmed by the framework developer, the third column is whether the questionnaire has been fixed, the fourth column is the label of the questionnaire, the fifth column is the type of questionnaire (divided into inconsistent problems, NAN problems, and Crash problems based on previous work types), and the last column is the framework category to which the questionnaire belongs.
 
 
 
