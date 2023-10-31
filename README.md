@@ -13,7 +13,7 @@ During the mutation process, we used the ONNX and onnx2keras frameworks to trans
 | E2 | 1.9.0   | 2.0.0     | 2.13.0     | 1.14.0 | 0.0.24     |
 | E3 | 1.10.1  | 2.1.0     | 2.13.0     | 1.14.0 | 0.0.24     |
 
-In addition, we have reported the framework issues detected during our experiments in the 'issue_detected.xlsx' file, which we have submitted to the framework repository. Among them, the first column is the description of the content of the issue, the second column is whether the issue has been confirmed by the framework developer, the third column is whether the issue has been fixed, the fourth column is the label of the issue, the fifth column is the type of issue (divided into inconsistent defects, NAN defects, and Crash defects based on previous work types), and the last column is the framework category to which the issue report belongs.
+In addition, we have reported the framework issues detected during our experiments in the 'issue_detected.xlsx' file, which we have submitted to the framework repository. Among them, the first column is the description of the content of the issue, the second column is whether the issue has been confirmed by the framework developer, the third column is whether the issue has been fixed, the fourth column is the label of the issue, the fifth column is the type of issue (divided into inconsistent defects, NAN defects, and Crash defects based on previous work types), and the last column is the framework category to which the issue report belongs. Finally, we also draw corresponding images for the result files in the two folders "RQ1_Result" and "RQ2_Result", and the specific results can be found in the 'Figs' folder.
 
 
 
